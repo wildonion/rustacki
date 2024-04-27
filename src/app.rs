@@ -80,6 +80,7 @@ use actix_web::middleware::Logger;
 use clap::Parser;
 use dotenv::dotenv;
 use std::io::BufWriter;
+use consts::SERVERS;
 use std::str::FromStr;
 use std::{fs::OpenOptions, io::BufReader};
 use rand::Rng;
@@ -172,6 +173,15 @@ async fn main() -> std::io::Result<()>{
     env_logger::init_from_env(Env::default().default_filter_or("info"));
     // env::set_var("RUST_LOG", "actix_web=debug");
 
+    /* -ˋˏ✄┈┈┈┈ validating user command input
+        >_ panic if he has passed unsupported server kind
+    */
+    let server = args.server.as_str();
+    let servers = SERVERS.to_vec();
+    if !servers.contains(&server){
+        panic!("Unsupported server");
+    }
+
     /* -ˋˏ✄┈┈┈┈ initializing appstate actor workers
         >_ run actor workers, app_state contains the whole app data 
         which will be used globally during the execution of the app
@@ -199,7 +209,6 @@ async fn main() -> std::io::Result<()>{
        some how we must halt the app for a while like using a loop{} or make 
        it sleep so adding a loop{} keeps the app awake.
        ************************************************************************* */
-    let server = args.server.as_str();
     match server{
         "http" => { // http sse and ws stream
             
