@@ -1,0 +1,18 @@
+[package]
+name = "models"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+name = "models"
+path = "src/lib.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+sea-orm = { version = "0.12" }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+hex = "0.4"
+chrono = { version = "0.4", features = ["serde"] }
+web3 = "0.19"

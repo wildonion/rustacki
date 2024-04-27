@@ -1,0 +1,18 @@
+code: 65535 | message: protocol error: AMQP soft error: NOT-FOUND: NOT_FOUND - no queue 'accept' in vhost '/' | due to: Redis, RMQ or Diesel Error
+ | time: 1714148961310 | method name: NotifConsumerActor.consume_basic_consume
+code: 65535 | message: protocol error: AMQP hard error: COMMAND-INVALID: COMMAND_INVALID - unknown exchange type 'wildonionExchange' | due to: Redis, RMQ or Diesel Error
+ | time: 1714155766122 | method name: NotifConsumerActor.exchange_declare
+code: 65535 | message: protocol error: AMQP soft error: NOT-FOUND: NOT_FOUND - no exchange 'accept.only.*' in vhost '/' | due to: Redis, RMQ or Diesel Error
+ | time: 1714155766154 | method name: NotifConsumerActor.queue_bind
+code: 65535 | message: protocol error: AMQP hard error: COMMAND-INVALID: COMMAND_INVALID - unknown exchange type 'wildonionExchange' | due to: Redis, RMQ or Diesel Error
+ | time: 1714155890372 | method name: NotifConsumerActor.exchange_declare
+code: 65535 | message: protocol error: AMQP soft error: NOT-FOUND: NOT_FOUND - no exchange 'wildonionExchange' in vhost '/' | due to: Redis, RMQ or Diesel Error
+ | time: 1714155890375 | method name: NotifConsumerActor.queue_bind
+code: 65535 | message: protocol error: AMQP soft error: ACCESS-REFUSED: ACCESS_REFUSED - queue name 'amq.topic.wildonionExchange' contains reserved prefix 'amq.*' | due to: Redis, RMQ or Diesel Error
+ | time: 1714155956625 | method name: NotifConsumerActor.queue_declare
+code: 65535 | message: protocol error: AMQP hard error: COMMAND-INVALID: COMMAND_INVALID - unknown exchange type 'amq.topic.wildonionExchange' | due to: Redis, RMQ or Diesel Error
+ | time: 1714155956625 | method name: NotifConsumerActor.exchange_declare
+code: 65535 | message: protocol error: AMQP soft error: ACCESS-REFUSED: ACCESS_REFUSED - queue name 'amq.topic.wildonionExchange' contains reserved prefix 'amq.*' | due to: Redis, RMQ or Diesel Error
+ | time: 1714156654006 | method name: NotifConsumerActor.queue_declare
+code: 65535 | message: protocol error: AMQP soft error: NOT-FOUND: NOT_FOUND - no exchange 'Events:Locations' in vhost '/' | due to: Redis, RMQ or Diesel Error
+ | time: 1714198739354 | method name: NotifConsumerActor.queue_bind
