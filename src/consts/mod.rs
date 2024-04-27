@@ -8,7 +8,7 @@ use rand::Rng;
 use rand::prelude::SliceRandom;
 use rand::random;
 
-
+pub const SERVERS: &[&str] = &["http", "webrtc", "p2p", "tcp", "worker", "grpc"];
 pub const CHARSNUMSSPECIAL: &str = "!@#$%&*0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnporstuvwxyz";
 pub const CHARSET: &[u8] = b"0123456789";
 
