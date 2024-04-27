@@ -50,7 +50,7 @@ read directly from the rmq ws broker itself for realtime monitoring in frontend 
     <img src="https://github.com/wildonion/rustacki/blob/main/infra/arch.png">
 </p>
 
-## How 2 setup, develop, and deplou?
+## How 2 setup, develop, and deploy?
 
 > if you want to deploy as a publisher or producer service then get your hands dirty by developing the `apis/http`, `actors/producers`, as a subscriber or consumer however, develop the `apis/http`, `actors/consumers` folders.
 
@@ -65,8 +65,6 @@ cargo run --bin rustacki -- --server tcp
 cargo run --bin rustacki -- --server grpc
 # launch as webrtc
 cargo run --bin rustacki -- --server webrtc
-# launch as quic
-cargo run --bin rustacki -- --server quic
 # launch as p2p
 cargo run --bin rustacki -- --server p2p
 # launch as worker
